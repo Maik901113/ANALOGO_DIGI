@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(10, 10, 10);
+}
+.borde {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5rem solid white;
+    border-radius: 50vh;
+    z-index: 1001;
+}
+
+.reloj{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../img/reloj.png");
+    background-size: cover;
+    border: 0.5rem solid rgb(186, 226, 27);
+    border-radius: 50vh;
+    box-shadow: inset 0px 0px 20px 5px rgb(237, 147, 13);
+
+}
+.reloj::before {
+
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(143, 226, 27);
+    border-radius: 50vh;
+    box-shadow: 0px 0px 10px 5px rgb(12, 148, 30);
+    z-index: 1000;
+}
+.hora{
+    width: 140px;
+    height: 140px;
+}
+.minuto{
+    width: 220px;
+    height: 220px;
+}
+.segundo{
+    width: 250px;
+    height: 250px;
+}
+.hora::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 90px;
+    background-color: rgb(6, 238, 115);
+    z-index: 10;
+    box-shadow: 0px 0px 5px 3px rgb(221, 0, 44);
+    border-radius: 50%;
+}
+.minuto::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 140px;
+    background-color: rgb(244, 50, 2);
+    z-index: 11;
+    box-shadow: 10px 0px 5px 0px rgb(225, 162, 162);
+    border-radius: 50%;
+}
+.segundo::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background-color: rgb(51, 153, 148);
+    z-index: 12;
+    box-shadow: 0px 0px 5px 3px rgb(43, 214, 226);
+    border-radius: 50%;
+}
+
+.hora,.minuto,.segundo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+}
+/* reloj digital*/
+.digital{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    margin-top: -150px;
+
+}
+.contDig{
+    font-size: 1rem;
+    font-family: monospace;
+    display: flex;
+    background-color: rgb(239, 238, 241);
+    border: 0.2rem solid rgb(17, 216, 173);
+    border-radius: 10%;
+    height: 50px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(17, 216, 173);
+    box-shadow: 0px 0px 5px 3px rgb(17, 216, 173);
+    z-index: 1000;
+}
